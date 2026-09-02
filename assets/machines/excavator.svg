@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-grad-excavator" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#15181e" />
+      <stop offset="100%" stop-color="#0a0b0d" />
+    </linearGradient>
+    <pattern id="grid-pat-excavator" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#22262f" stroke-width="0.5" />
+    </pattern>
+  </defs>
+  <rect width="600" height="400" fill="url(#bg-grad-excavator)" />
+  <rect width="600" height="400" fill="url(#grid-pat-excavator)" />
+  
+  <!-- Technical Frame & Corner Anchors -->
+  <rect x="20" y="20" width="560" height="360" fill="none" stroke="#2b313d" stroke-width="1" stroke-dasharray="4 4" />
+  <circle cx="20" cy="20" r="3" fill="#E5A910" />
+  <circle cx="580" cy="20" r="3" fill="#E5A910" />
+  <circle cx="20" cy="380" r="3" fill="#E5A910" />
+  <circle cx="580" cy="380" r="3" fill="#E5A910" />
+  
+  <!-- Technical Labels -->
+  <text x="35" y="45" fill="#E5A910" font-family="monospace" font-size="12" font-weight="bold" letter-spacing="1">DMR-EQUIP // 01</text>
+  <text x="565" y="45" fill="#8f9cae" font-family="monospace" font-size="11" text-anchor="end">HEAVY HYDRAULIC</text>
+
+  <!-- Machine Silhouette Graphic -->
+  <g transform="translate(100, 75)">
+    
+      <!-- Ground -->
+      <ellipse cx="200" cy="235" rx="170" ry="12" fill="#050608" opacity="0.6" />
+      <!-- Tracks -->
+      <rect x="70" y="195" width="250" height="36" rx="18" fill="#1b1e24" stroke="#495057" stroke-width="3" />
+      <circle cx="95" cy="213" r="13" fill="#2d3239" stroke="#E5A910" stroke-width="2" />
+      <circle cx="150" cy="213" r="10" fill="#2d3239" />
+      <circle cx="195" cy="213" r="10" fill="#2d3239" />
+      <circle cx="240" cy="213" r="10" fill="#2d3239" />
+      <circle cx="295" cy="213" r="13" fill="#2d3239" stroke="#E5A910" stroke-width="2" />
+      <!-- Body/Cab -->
+      <path d="M 120 195 L 120 140 L 160 105 L 250 105 L 270 145 L 270 195 Z" fill="#E5A910" stroke="#b38104" stroke-width="2" />
+      <path d="M 170 115 L 245 115 L 250 155 L 170 155 Z" fill="#0d1117" stroke="#333" stroke-width="1.5" />
+      <rect x="75" y="140" width="45" height="55" rx="4" fill="#1b1e24" stroke="#343a40" stroke-width="2" />
+      <!-- Boom / Arm / Bucket -->
+      <path d="M 240 155 L 300 50 L 325 60 L 255 170 Z" fill="#E5A910" stroke="#b38104" stroke-width="2" />
+      <path d="M 310 55 L 385 140 L 370 150 L 300 65 Z" fill="#E5A910" stroke="#b38104" stroke-width="2" />
+      <path d="M 380 140 C 415 155, 425 185, 395 205 C 380 210, 365 195, 370 180 Z" fill="#1b1e24" stroke="#E5A910" stroke-width="2" />
+    
+  </g>
+
+  <!-- Bottom Badging -->
+  <text x="300" y="335" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="800" letter-spacing="2" text-anchor="middle">EXCAVATOR</text>
+  <text x="300" y="358" fill="#E5A910" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" letter-spacing="1.5" text-anchor="middle">DMR PRACTICAL OPERATOR TRAINING</text>
+</svg>
