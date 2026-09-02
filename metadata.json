@@ -1,0 +1,6 @@
+{
+  "name": "DMR Digital Billboard",
+  "description": "Mobile-first interactive digital billboard experience for DMR Earthmoving Training Specialists, accessed via QR code on DMR T-shirts.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
