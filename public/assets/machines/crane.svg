@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-grad-crane" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#15181e" />
+      <stop offset="100%" stop-color="#0a0b0d" />
+    </linearGradient>
+    <pattern id="grid-pat-crane" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#22262f" stroke-width="0.5" />
+    </pattern>
+  </defs>
+  <rect width="600" height="400" fill="url(#bg-grad-crane)" />
+  <rect width="600" height="400" fill="url(#grid-pat-crane)" />
+  
+  <!-- Technical Frame & Corner Anchors -->
+  <rect x="20" y="20" width="560" height="360" fill="none" stroke="#2b313d" stroke-width="1" stroke-dasharray="4 4" />
+  <circle cx="20" cy="20" r="3" fill="#E5A910" />
+  <circle cx="580" cy="20" r="3" fill="#E5A910" />
+  <circle cx="20" cy="380" r="3" fill="#E5A910" />
+  <circle cx="580" cy="380" r="3" fill="#E5A910" />
+  
+  <!-- Technical Labels -->
+  <text x="35" y="45" fill="#E5A910" font-family="monospace" font-size="12" font-weight="bold" letter-spacing="1">DMR-EQUIP // 06</text>
+  <text x="565" y="45" fill="#8f9cae" font-family="monospace" font-size="11" text-anchor="end">MOBILE TELESCOPIC LIFTING</text>
+
+  <!-- Machine Silhouette Graphic -->
+  <g transform="translate(100, 75)">
+    
+      <!-- Ground -->
+      <ellipse cx="200" cy="235" rx="170" ry="12" fill="#050608" opacity="0.6" />
+      <!-- 4 Axle Multi-Wheels -->
+      <circle cx="80" cy="205" r="22" fill="#14171d" stroke="#495057" stroke-width="3" />
+      <circle cx="130" cy="205" r="22" fill="#14171d" stroke="#495057" stroke-width="3" />
+      <circle cx="210" cy="205" r="22" fill="#14171d" stroke="#495057" stroke-width="3" />
+      <circle cx="260" cy="205" r="22" fill="#14171d" stroke="#495057" stroke-width="3" />
+      <!-- Heavy Crane Carrier Chassis -->
+      <rect x="50" y="170" width="240" height="35" rx="3" fill="#E5A910" stroke="#b38104" stroke-width="2" />
+      <polygon points="260,170 290,170 280,145 250,145" fill="#0d1117" stroke="#E5A910" stroke-width="1.5" />
+      <!-- Outrigger Pads -->
+      <rect x="60" y="195" width="10" height="25" fill="#333" />
+      <rect x="50" y="220" width="30" height="6" fill="#E5A910" />
+      <!-- Rotating Turntable & Telescopic Boom -->
+      <rect x="80" y="145" width="50" height="25" rx="2" fill="#1b1e24" />
+      <polygon points="100,150 340,55 350,70 110,165" fill="#E5A910" stroke="#b38104" stroke-width="2" />
+      <!-- Hook & Wire -->
+      <line x1="345" y1="62" x2="345" y2="150" stroke="#ffffff" stroke-width="1.5" stroke-dasharray="2 2" />
+      <path d="M 345 150 L 345 160 C 345 175, 330 170, 335 160" fill="none" stroke="#E5A910" stroke-width="3" />
+    
+  </g>
+
+  <!-- Bottom Badging -->
+  <text x="300" y="335" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="800" letter-spacing="2" text-anchor="middle">CRANE</text>
+  <text x="300" y="358" fill="#E5A910" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" letter-spacing="1.5" text-anchor="middle">DMR PRACTICAL OPERATOR TRAINING</text>
+</svg>
