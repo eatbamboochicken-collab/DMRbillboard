@@ -1,0 +1,1280 @@
+/* ==========================================================================
+   DMR DIGITAL BILLBOARD — ART-DIRECTED COMMERCIAL INDUSTRIAL STYLESHEET
+   Brand: DMR Earthmoving Training Specialists (Harare, Zimbabwe)
+   System: Premium Industrial Editorial Magazine + Modern Mobile Platform
+   Dominant Palette: Warm Off-White (#F5F4F0), Crisp White (#FFFFFF),
+                     Industrial Black (#111111), DMR Accent Yellow (#F2B400)
+   ========================================================================== */
+
+:root {
+  /* Editorial Palette */
+  --black: #111111;
+  --black-elevated: #1a1c22;
+  --yellow: #F2B400;
+  --yellow-hover: #ffc414;
+  --yellow-light: #fff8e5;
+  --white: #FFFFFF;
+  --surface: #F5F4F0;
+  --surface-alt: #ECEBE6;
+  --surface-subtle: #FAF9F6;
+  --border: #DFDCD4;
+  --border-light: #EBE8E1;
+  --border-dark: #262930;
+
+  --text: #111111;
+  --text-secondary: #4a4d55;
+  --muted: #686868;
+  --text-on-dark: #F5F4F0;
+  --text-muted-dark: #8E96A4;
+
+  --whatsapp: #25D366;
+  --whatsapp-hover: #20ba5a;
+
+  /* Typography */
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+
+  /* Grid & Rhythm */
+  --max-w: 680px;
+  --radius: 3px;
+  --radius-lg: 6px;
+}
+
+/* Reset & Foundation */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  background-color: var(--surface);
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--surface);
+  color: var(--text);
+  line-height: 1.5;
+  min-height: 100vh;
+  padding-bottom: 84px; /* Space for sticky mobile bar */
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-w);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+/* ==========================================================================
+   1. EDITORIAL LIVE STATUS BAR
+   ========================================================================== */
+.live-status-bar {
+  background-color: var(--black);
+  color: var(--text-on-dark);
+  padding: 10px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 1px;
+  border-bottom: 2px solid var(--yellow);
+}
+
+.live-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.live-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--yellow);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--yellow);
+  animation: pulseLive 2s infinite ease-in-out;
+}
+
+@keyframes pulseLive {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
+}
+
+.live-channel {
+  font-weight: 700;
+  color: var(--white);
+}
+
+.live-location {
+  color: var(--text-muted-dark);
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   2. BRAND HEADER (CRISP INDUSTRIAL MASTHEAD)
+   ========================================================================== */
+.site-masthead {
+  background-color: var(--white);
+  border-bottom: 1px solid var(--border);
+  padding: 16px 0;
+}
+
+.masthead-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand-masthead-title {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-main-name {
+  font-size: 1.45rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  color: var(--black);
+  line-height: 1;
+}
+
+.brand-main-name span {
+  color: #a37500;
+}
+
+.brand-specialists {
+  font-size: 0.68rem;
+  font-family: var(--font-mono);
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin-top: 3px;
+}
+
+.masthead-call-btn {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 800;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--black);
+  padding: 8px 14px;
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.masthead-call-btn:hover {
+  background-color: var(--yellow);
+  border-color: var(--yellow);
+}
+
+/* ==========================================================================
+   3. HERO SECTION (EDITORIAL + BREAKOUT MACHINE VISUAL)
+   ========================================================================== */
+.hero-editorial {
+  background: linear-gradient(180deg, var(--white) 0%, var(--surface) 100%);
+  padding: 32px 0 24px 0;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-meta-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #a37500;
+  background-color: var(--yellow-light);
+  border: 1px solid rgba(242,180,0,0.35);
+  padding: 4px 10px;
+  border-radius: var(--radius);
+  margin-bottom: 14px;
+  text-transform: uppercase;
+}
+
+.hero-display-title {
+  font-size: 2.85rem;
+  font-weight: 900;
+  line-height: 0.98;
+  letter-spacing: -1.2px;
+  color: var(--black);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.hero-display-title span {
+  color: #a37500;
+  display: block;
+}
+
+.hero-tagline-text {
+  font-size: 1.12rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  line-height: 1.45;
+  margin-bottom: 22px;
+  max-width: 480px;
+}
+
+.hero-tagline-text strong {
+  color: var(--black);
+  font-weight: 700;
+}
+
+/* Hero Conversion Actions */
+.hero-cta-stack {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin-bottom: 24px;
+  position: relative;
+  z-index: 5;
+}
+
+@media (min-width: 460px) {
+  .hero-cta-stack {
+    grid-template-columns: 1.2fr 1fr;
+  }
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 15px 18px;
+  font-size: 0.95rem;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  border-radius: var(--radius);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  white-space: nowrap;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn-whatsapp-main {
+  background-color: var(--whatsapp);
+  color: #031c0a;
+}
+
+.btn-whatsapp-main:hover {
+  background-color: var(--whatsapp-hover);
+  color: #000;
+}
+
+.btn-call-solid {
+  background-color: var(--black);
+  color: var(--white);
+  border-color: var(--black);
+}
+
+.btn-call-solid:hover {
+  background-color: #222;
+  border-color: var(--yellow);
+  color: var(--yellow);
+}
+
+/* Large Breakout Machine Showcase in Hero */
+.hero-machine-frame {
+  margin-top: 10px;
+  position: relative;
+  background-color: var(--black);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-dark);
+  overflow: hidden;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.18);
+}
+
+.hero-machine-frame img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-machine-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(9,10,13,0.92) 70%);
+  padding: 24px 16px 12px 16px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.hero-machine-tag {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: var(--yellow);
+  letter-spacing: 1px;
+}
+
+.hero-machine-note {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--text-muted-dark);
+}
+
+/* ==========================================================================
+   4. EDITORIAL STATISTICS STRIP (CLEAN DMR NUMBERS)
+   ========================================================================== */
+.stats-strip {
+  background-color: var(--white);
+  border-bottom: 1px solid var(--border);
+  padding: 18px 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 0 6px;
+  position: relative;
+}
+
+.stat-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 15%;
+  height: 70%;
+  width: 1px;
+  background-color: var(--border);
+}
+
+.stat-val {
+  font-size: 1.35rem;
+  font-weight: 900;
+  color: var(--black);
+  line-height: 1;
+  letter-spacing: -0.5px;
+}
+
+.stat-val span {
+  color: #a37500;
+}
+
+.stat-lbl {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 800;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 4px;
+  line-height: 1.2;
+}
+
+/* ==========================================================================
+   5. CURRENT OPPORTUNITY (CAMPAIGN MAGAZINE SPREAD)
+   ========================================================================== */
+.campaign-section {
+  padding: 36px 0;
+  background-color: var(--surface-alt);
+  border-bottom: 1px solid var(--border);
+}
+
+.campaign-spread {
+  background-color: var(--black);
+  border-radius: var(--radius-lg);
+  color: var(--white);
+  overflow: hidden;
+  border: 1px solid var(--border-dark);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.campaign-content-side {
+  padding: 28px 22px;
+}
+
+.campaign-eyebrow {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--yellow);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.campaign-headline {
+  font-size: 2.1rem;
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -0.5px;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: 12px;
+}
+
+.campaign-body {
+  font-size: 1rem;
+  color: var(--text-muted-dark);
+  line-height: 1.5;
+  margin-bottom: 22px;
+}
+
+.campaign-explore-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--yellow);
+  color: var(--black);
+  font-size: 0.88rem;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  padding: 13px 20px;
+  border-radius: var(--radius);
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+}
+
+.campaign-explore-btn:hover {
+  background-color: var(--yellow-hover);
+  transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   6. FEATURED MACHINE SPOTLIGHT (EXCAVATOR)
+   ========================================================================== */
+.spotlight-section {
+  padding: 40px 0;
+  background-color: var(--white);
+  border-bottom: 1px solid var(--border);
+}
+
+.section-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #a37500;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.section-title-editorial {
+  font-size: 2.1rem;
+  font-weight: 900;
+  color: var(--black);
+  letter-spacing: -0.8px;
+  line-height: 1.05;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.section-subtitle-editorial {
+  font-size: 0.98rem;
+  color: var(--muted);
+  margin-bottom: 22px;
+}
+
+.spotlight-card {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.spotlight-media {
+  position: relative;
+  background-color: var(--black);
+  border-bottom: 1px solid var(--border);
+}
+
+.spotlight-media img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.spotlight-tag-overlay {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background-color: rgba(9, 10, 13, 0.9);
+  color: var(--yellow);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: var(--radius);
+  border: 1px solid rgba(242,180,0,0.4);
+}
+
+.spotlight-body {
+  padding: 22px 20px;
+}
+
+.spotlight-h3 {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--black);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.spotlight-sub {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #a37500;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+}
+
+.spotlight-specs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.spec-badge {
+  background-color: var(--white);
+  border: 1px solid var(--border);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--black);
+  padding: 5px 10px;
+  border-radius: var(--radius);
+  text-transform: uppercase;
+}
+
+.spotlight-desc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  margin-bottom: 20px;
+}
+
+.spotlight-btn-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+@media (min-width: 480px) {
+  .spotlight-btn-row {
+    grid-template-columns: 1.2fr 1fr;
+  }
+}
+
+/* ==========================================================================
+   7. CHOOSE YOUR MACHINE (CLEAN 2-COLUMN EDITORIAL GRID)
+   ========================================================================== */
+.machines-section {
+  padding: 40px 0;
+  background-color: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.machines-grid-editorial {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.machine-card-editorial {
+  background-color: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.machine-card-editorial:hover, .machine-card-editorial:focus-visible {
+  border-color: #a37500;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.machine-card-thumb {
+  position: relative;
+  background-color: var(--black);
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border);
+}
+
+.machine-card-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.machine-card-editorial:hover .machine-card-thumb img {
+  transform: scale(1.04);
+}
+
+.machine-card-index {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 800;
+  background-color: rgba(9, 10, 13, 0.92);
+  color: var(--yellow);
+  padding: 2px 6px;
+  border-radius: 2px;
+}
+
+.machine-card-content {
+  padding: 12px 10px 14px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.machine-card-title {
+  font-size: 0.95rem;
+  font-weight: 900;
+  color: var(--black);
+  text-transform: uppercase;
+  line-height: 1.15;
+  margin-bottom: 4px;
+}
+
+.machine-card-sub {
+  font-size: 0.72rem;
+  color: var(--muted);
+  line-height: 1.3;
+  margin-bottom: 10px;
+}
+
+.machine-card-cta {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: #a37500;
+  letter-spacing: 0.5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* ==========================================================================
+   8. MORE THAN TRAINING (WHAT YOU GET)
+   ========================================================================== */
+.value-section {
+  padding: 40px 0;
+  background-color: var(--white);
+  border-bottom: 1px solid var(--border);
+}
+
+.value-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+@media (min-width: 480px) {
+  .value-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.value-item {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  padding: 16px 18px;
+  border-radius: var(--radius);
+}
+
+.value-title {
+  font-size: 0.95rem;
+  font-weight: 900;
+  color: var(--black);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.value-title span {
+  color: #a37500;
+}
+
+.value-desc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.45;
+}
+
+/* ==========================================================================
+   9. GRADUATE STORY (REAL HUMAN PROOF)
+   ========================================================================== */
+.graduate-section {
+  padding: 40px 0;
+  background-color: var(--surface-alt);
+  border-bottom: 1px solid var(--border);
+}
+
+.graduate-card {
+  background-color: var(--black);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  color: var(--white);
+  border: 1px solid var(--border-dark);
+}
+
+.graduate-media img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.graduate-body {
+  padding: 24px 20px;
+}
+
+.graduate-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--yellow);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.graduate-quote {
+  font-size: 1.35rem;
+  font-weight: 900;
+  line-height: 1.2;
+  color: var(--white);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.graduate-quote span {
+  color: var(--yellow);
+}
+
+.graduate-text {
+  font-size: 0.92rem;
+  color: var(--text-muted-dark);
+  line-height: 1.5;
+  margin-bottom: 18px;
+}
+
+.graduate-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--yellow);
+  text-transform: uppercase;
+}
+
+/* ==========================================================================
+   10. APPLICATION / REGISTRATION SECTION
+   ========================================================================== */
+.reg-section {
+  padding: 40px 0;
+  background-color: var(--white);
+  border-bottom: 1px solid var(--border);
+}
+
+.reg-form-card {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px 20px;
+}
+
+.reg-form-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.reg-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.reg-label {
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: var(--black);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.reg-input, .reg-select {
+  background-color: var(--white);
+  border: 1px solid var(--border);
+  color: var(--black);
+  padding: 13px 14px;
+  border-radius: var(--radius);
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  width: 100%;
+}
+
+.reg-input:focus, .reg-select:focus {
+  outline: none;
+  border-color: #a37500;
+  box-shadow: 0 0 0 2px var(--yellow-light);
+}
+
+.reg-submit-btn {
+  width: 100%;
+  padding: 16px;
+  font-size: 0.98rem;
+  font-weight: 900;
+  background-color: var(--yellow);
+  color: var(--black);
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: all 0.2s ease;
+}
+
+.reg-submit-btn:hover {
+  background-color: var(--yellow-hover);
+}
+
+/* ==========================================================================
+   11. FINAL CONCLUSION CTA (READY TO START?)
+   ========================================================================== */
+.final-cta-section {
+  padding: 44px 0 36px 0;
+  background-color: var(--black);
+  color: var(--white);
+  border-bottom: 1px solid var(--border-dark);
+}
+
+.final-cta-box {
+  text-align: center;
+}
+
+.final-cta-badge {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--yellow);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.final-cta-title {
+  font-size: 2.4rem;
+  font-weight: 900;
+  letter-spacing: -1px;
+  line-height: 1.05;
+  color: var(--white);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.final-cta-sub {
+  font-size: 1.05rem;
+  color: var(--text-muted-dark);
+  margin-bottom: 26px;
+}
+
+.final-cta-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+/* ==========================================================================
+   12. SITE FOOTER
+   ========================================================================== */
+.site-footer {
+  padding: 32px 0 24px 0;
+  background-color: var(--surface);
+  border-top: 1px solid var(--border);
+  font-size: 0.85rem;
+}
+
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.footer-brand {
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: var(--black);
+}
+
+.footer-brand span {
+  color: #a37500;
+}
+
+.footer-tagline {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 800;
+  color: var(--muted);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.footer-loc {
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+.footer-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+}
+
+.footer-redirect-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--white);
+  border: 1px solid var(--border);
+  padding: 12px 14px;
+  border-radius: var(--radius);
+  color: var(--black);
+  font-weight: 700;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.footer-redirect-row:hover {
+  border-color: #a37500;
+  background-color: var(--yellow-light);
+  transform: translateX(2px);
+}
+
+.redirect-icon {
+  font-size: 1rem;
+  margin-right: 8px;
+}
+
+.redirect-label {
+  flex-grow: 1;
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.redirect-arrow {
+  color: #a37500;
+  font-weight: 900;
+  font-size: 0.95rem;
+}
+
+.footer-web-tag {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: var(--muted);
+  letter-spacing: 1px;
+  padding: 4px 2px;
+}
+
+.input-error {
+  border-color: #dc2626 !important;
+  box-shadow: 0 0 0 2px rgba(220, 38, 38, 0.2) !important;
+}
+
+.footer-signature {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--muted);
+}
+
+/* ==========================================================================
+   13. MODAL / FOCUSED MACHINE EXPERIENCE
+   ========================================================================== */
+.detail-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(9, 10, 13, 0.88);
+  backdrop-filter: blur(8px);
+  z-index: 100;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.detail-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.detail-card {
+  background-color: var(--white);
+  border: 1px solid var(--border);
+  border-top: 4px solid var(--yellow);
+  width: 100%;
+  max-width: var(--max-w);
+  max-height: 90vh;
+  border-radius: 12px 12px 0 0;
+  overflow-y: auto;
+  transform: translateY(100%);
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 -16px 48px rgba(0, 0, 0, 0.4);
+}
+
+@media (min-width: 640px) {
+  .detail-overlay {
+    align-items: center;
+    padding: 20px;
+  }
+  .detail-card {
+    border-radius: var(--radius-lg);
+    transform: translateY(20px) scale(0.98);
+  }
+}
+
+.detail-overlay.active .detail-card {
+  transform: translateY(0) scale(1);
+}
+
+.detail-header-media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  max-height: 240px;
+  background-color: var(--black);
+  border-bottom: 1px solid var(--border);
+}
+
+.detail-header-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.detail-close-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  background-color: rgba(17, 17, 17, 0.9);
+  border: 1px solid var(--border-dark);
+  border-radius: 50%;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.1rem;
+  z-index: 10;
+}
+
+.detail-close-btn:hover {
+  background-color: var(--yellow);
+  color: var(--black);
+}
+
+.detail-body {
+  padding: 24px 20px 32px 20px;
+}
+
+.detail-num {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: #a37500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.detail-name {
+  font-size: 1.85rem;
+  font-weight: 900;
+  color: var(--black);
+  line-height: 1.08;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.detail-statement {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #a37500;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.detail-specs-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.detail-spec-chip {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  padding: 6px 12px;
+  border-radius: var(--radius);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--black);
+  text-transform: uppercase;
+}
+
+.detail-desc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  margin-bottom: 24px;
+}
+
+.detail-actions {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+
+@media (min-width: 480px) {
+  .detail-actions {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ==========================================================================
+   14. ELEGANT STICKY MOBILE CONTACT BAR
+   ========================================================================== */
+.sticky-mobile-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(12px);
+  border-top: 1px solid var(--border);
+  padding: 10px 14px;
+  padding-bottom: max(10px, env(safe-area-inset-bottom));
+  z-index: 50;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.08);
+}
+
+@media (min-width: 680px) {
+  .sticky-mobile-bar {
+    max-width: var(--max-w);
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 8px 8px 0 0;
+    border-left: 1px solid var(--border);
+    border-right: 1px solid var(--border);
+  }
+}
+
+.sticky-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 13px 10px;
+  border-radius: var(--radius);
+  font-size: 0.85rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  border: 1px solid transparent;
+}
+
+.sticky-btn-wa {
+  background-color: var(--whatsapp);
+  color: #031c0a;
+}
+
+.sticky-btn-wa:hover {
+  background-color: var(--whatsapp-hover);
+}
+
+.sticky-btn-call {
+  background-color: var(--yellow);
+  color: var(--black);
+}
+
+.sticky-btn-call:hover {
+  background-color: var(--yellow-hover);
+}
